@@ -1,14 +1,16 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
+  Title
+} from "./chunk-BXXIE5UN.js";
+import {
   DOCUMENT,
   HashLocationStrategy,
   LOCATION_INITIALIZED,
   Location,
   LocationStrategy,
   PathLocationStrategy,
-  Title,
   ViewportScroller
-} from "./chunk-4I5S5VXH.js";
+} from "./chunk-WRKQCKFI.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,

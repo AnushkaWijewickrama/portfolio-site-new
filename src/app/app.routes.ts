@@ -2,10 +2,17 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { HeroComponent } from './pages/hero/hero.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { SidebarComponent } from './pages/sidebar/sidebar.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ExperienceComponent } from './pages/experience/experience.component';
+import { WorksComponent } from './pages/works/works.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'hero', component: HeroComponent },
-    { path: 'header', component: HeaderComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'experience', component: ExperienceComponent },
+    { path: 'works', component: WorksComponent },
+    { path: 'contact', component: ContactsComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

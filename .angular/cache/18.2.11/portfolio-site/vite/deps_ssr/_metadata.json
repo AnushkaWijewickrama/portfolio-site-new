@@ -1,37 +1,55 @@
 {
-  "hash": "ca999e4e",
-  "configHash": "3558f207",
+  "hash": "3f7fd375",
+  "configHash": "8c1e18ca",
   "lockfileHash": "2ee568f1",
-  "browserHash": "5a596d58",
+  "browserHash": "b472602d",
   "optimized": {
+    "@angular/animations": {
+      "src": "../../../../../../node_modules/@angular/animations/fesm2022/animations.mjs",
+      "file": "@angular_animations.js",
+      "fileHash": "9f08b186",
+      "needsInterop": false
+    },
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "a2746d73",
+      "needsInterop": false
+    },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "a239a3da",
+      "fileHash": "339cb983",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "9ec6f79a",
+      "fileHash": "bd83f8b1",
       "needsInterop": false
     },
     "@angular/platform-server": {
       "src": "../../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
       "file": "@angular_platform-server.js",
-      "fileHash": "48b53271",
+      "fileHash": "d1b08abe",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "c8f66632",
+      "fileHash": "2a36e3b7",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-4I5S5VXH": {
-      "file": "chunk-4I5S5VXH.js"
+    "chunk-5WVPOM3T": {
+      "file": "chunk-5WVPOM3T.js"
+    },
+    "chunk-BXXIE5UN": {
+      "file": "chunk-BXXIE5UN.js"
+    },
+    "chunk-WRKQCKFI": {
+      "file": "chunk-WRKQCKFI.js"
     },
     "chunk-UFOVQTBA": {
       "file": "chunk-UFOVQTBA.js"
