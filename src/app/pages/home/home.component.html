@@ -1,18 +1,41 @@
-<div class="relative bg-white p-8 rounded-lg  max-w-4xl grid grid-cols-2 items-center gap-8" *ngIf="showContent"
-    @fadeIn>
+<div class="relative bg-white p-6 sm:p-8 rounded-lg max-w-4xl grid grid-cols-1 sm:grid-cols-2 items-center gap-6 sm:gap-8"
+    *ngIf="showContent" @fadeIn>
     <!-- Profile Image with background shape -->
-    <div class="relative w-full h-96 rounded-full overflow-hidden bg-cyan-400 flex items-center justify-center">
-        <img src="/anushka.JPG" alt="Profile" class="w-48 h-48 object-cover rounded-full">
+    <div class="relative w-full h-64 sm:h-96 rounded-full overflow-hidden bg-cyan-400 flex items-center justify-center">
+        <img src="/anushka.JPG" alt="Profile" class="w-32 h-32 sm:w-48 sm:h-48 object-cover rounded-full">
     </div>
 
     <!-- Text Section -->
-    <div>
-        <p class="text-lg text-gray-500 uppercase">Developer</p>
-        <h1 class="text-7xl font-bold text-gray-900 leading-tight">Anushka Wijewickrama</h1>
+    <div class="text-center sm:text-left">
+        <p class="text-md sm:text-lg text-gray-500 uppercase">Developer</p>
+        <h1 class="text-4xl sm:text-7xl font-bold text-gray-900 leading-tight">Anushka Wijewickrama</h1>
     </div>
 
     <!-- Background number -->
-    <div class="absolute text-[30rem] text-black font-bold right-8 top-1/2 transform -translate-y-1/2 opacity-10">
+    <div
+        class="absolute text-[10rem] sm:text-[30rem] text-black font-bold right-4 sm:right-8 top-1/2 transform -translate-y-1/2 opacity-10">
         01
     </div>
 </div>
+
+<section class="flex flex-col sm:flex-row items-center justify-center py-8 sm:py-12">
+    <div class="flex flex-col sm:flex-row sm:space-x-8">
+        <div class="text-center mb-4 sm:mb-0">
+            <span class="text-gray-400 font-medium text-sm">01</span>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mt-2">UI/UX Design</h3>
+            <p class="text-gray-500 mt-2 text-xs">At in proin consequat ut cursus venenatis sapien.</p>
+        </div>
+        <div class="text-center mb-4 sm:mb-0">
+            <span class="text-gray-400 font-medium text-sm">02</span>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mt-2">Backend Developer</h3>
+            <p class="text-gray-500 mt-2 text-xs">At in proin consequat ut cursus venenatis sapien.</p>
+        </div>
+        <!-- Button -->
+        <div class="flex items-center justify-center mt-4 sm:mt-0">
+            <a routerLink="/works"
+                class="bg-gray-800 text-white px-6 py-3 font-semibold text-sm rounded hover:bg-gray-900 transition">
+                VIEW ALL WORK
+            </a>
+        </div>
+    </div>
+</section>

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from "../sidebar/sidebar.component";
 import { trigger, transition, style, animate } from '@angular/animations';
 import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SidebarComponent, NgIf],
+  imports: [SidebarComponent, NgIf, RouterLink],
   animations: [
     trigger('fadeIn', [
       transition(':enter', [
