@@ -6,10 +6,10 @@ import { WorksComponent } from './pages/works/works.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent, data: { num: 1 } },
-    { path: 'about', component: AboutComponent, data: { num: 2 } },
-    { path: 'experience', component: ExperienceComponent, data: { num: 1 } },
-    { path: 'works', component: WorksComponent, data: { num: 2 } },
-    { path: 'contact', component: ContactsComponent, data: { num: 2 } },
+    { path: '', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'experience', component: ExperienceComponent },
+    { path: 'works', component: WorksComponent },
+    { path: 'contact', component: ContactsComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
