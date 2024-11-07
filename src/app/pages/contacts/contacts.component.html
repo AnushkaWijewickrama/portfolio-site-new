@@ -1,36 +1,44 @@
-<section class="max-w-6xl mx-auto px-6 py-12 relative">
+<section class=" mx-auto px-6 py-12 relative dark:bg-gray-900">
     <!-- Header -->
     <div class="text-center mb-12">
-        <p class="text-xs text-gray-500 uppercase tracking-widest">Personal Info</p>
-        <h1 class="text-4xl font-bold text-gray-900">Contact Me</h1>
-        <p class="mt-4 text-sm text-gray-600">Labore accusam in modo corrupti, laoreet substantiales um ea sed esse
+        <p class="text-xs text-gray-500 uppercase tracking-widest dark:text-gray-400">Personal Info</p>
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Contact Me</h1>
+        <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Labore accusam in modo corrupti, laoreet substantiales
+            um ea sed esse
             haec.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-10 relative z-10">
+    <div
+        class="pr-[20px] pl-[20px] mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-100 dark:bg-gray-900 lg:pr-[160px] lg:pl-[150px]">
         <!-- FAQ Section -->
         <div>
-            <h2 class="text-xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 class="text-xl font-bold mb-4 dark:text-white">Frequently Asked Questions</h2>
             <div>
                 <!-- FAQ Item 1 -->
                 <details class="mb-4">
-                    <summary class="text-sm font-semibold cursor-pointer">What experience do you have in my industry?
+                    <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">What experience do you have
+                        in my industry?
                     </summary>
-                    <p class="mt-2 text-sm text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat...</p>
                 </details>
                 <!-- FAQ Item 2 -->
                 <details class="mb-4">
-                    <summary class="text-sm font-semibold cursor-pointer">How many clients do you typically work with at
+                    <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">How many clients do you
+                        typically work with at
                         once?</summary>
-                    <p class="mt-2 text-sm text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat...</p>
                 </details>
                 <!-- FAQ Item 3 -->
                 <details class="mb-4">
-                    <summary class="text-sm font-semibold cursor-pointer">Do you have the capacity to take on this
+                    <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">Do you have the capacity to
+                        take on this
                         project right now?</summary>
-                    <p class="mt-2 text-sm text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat...</p>
                 </details>
             </div>
@@ -38,23 +46,24 @@
 
         <!-- Contact Form -->
         <div>
-            <h2 class="text-xl font-bold mb-4">Feel free to send me a message or any word of appreciation.</h2>
+            <h2 class="text-xl font-bold mb-4 dark:text-white">Feel free to send me a message or any word of
+                appreciation.</h2>
             <form action="#" method="POST" class="space-y-4">
                 <div>
                     <input type="text" name="name" placeholder="Your Full Name" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md text-sm focus:ring focus:ring-indigo-100 focus:border-indigo-300">
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600">
                 </div>
                 <div>
                     <input type="email" name="email" placeholder="Your Email Address" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md text-sm focus:ring focus:ring-indigo-100 focus:border-indigo-300">
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600">
                 </div>
                 <div>
                     <textarea name="message" rows="4" placeholder="Your Message" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md text-sm focus:ring focus:ring-indigo-100 focus:border-indigo-300"></textarea>
+                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600"></textarea>
                 </div>
                 <div>
                     <button type="submit"
-                        class="w-full bg-black text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition">
+                        class="w-full bg-black dark:bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 dark:hover:bg-indigo-500 transition">
                         Submit
                     </button>
                 </div>
@@ -63,7 +72,7 @@
     </div>
 
     <!-- Background number -->
-    <div class="absolute inset-0 flex items-center justify-end pointer-events-none">
-        <span class="text-[10rem] sm:text-[30rem]  font-bold opacity-10 pr-8">05</span>
-    </div>
+    <!-- <div class="absolute inset-0 flex items-center justify-end pointer-events-none">
+        <span class="text-[10rem] sm:text-[30rem]  font-bold opacity-10 pr-8 dark:text-gray-700">05</span>
+    </div> -->
 </section>
