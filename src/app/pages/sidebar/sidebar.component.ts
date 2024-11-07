@@ -1,22 +1,18 @@
-import { NgClass, NgFor, NgStyle } from '@angular/common';
-import { Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
-import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { NavigationService } from '../../shared/util/navigation.service';
-import { routerTransition } from '../../shared/util/animations';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ContactsComponent } from "../contacts/contacts.component";
 import { HomeComponent } from "../home/home.component";
 import { AboutComponent } from "../about/about.component";
 import { ExperienceComponent } from "../experience/experience.component";
 import { WorksComponent } from "../works/works.component";
 import $ from 'jquery';
+import { isMobileResolution } from '../../shared/util/common-util';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [NgFor, HeaderComponent, RouterOutlet, RouterLink, NgClass, NgStyle, ContactsComponent, HomeComponent, AboutComponent, ExperienceComponent, WorksComponent],
-  animations: [
-    routerTransition(),
-  ],
+  imports: [NgFor, HeaderComponent, RouterOutlet, RouterLink, NgClass, NgStyle, ContactsComponent, HomeComponent, AboutComponent, ExperienceComponent, WorksComponent, NgIf],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -27,85 +23,95 @@ export class SidebarComponent implements OnInit {
   currentSection: number = 1;
   isDarkMode = false;
 
-
   constructor(private renderer: Renderer2) { }
-
-
 
   ngOnInit(): void {
 
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const sidebarLinks = document.querySelectorAll('#mobileSidebar .scrollLink');
 
+    // Toggle sidebar visibility when hamburger icon is clicked
+    menuBtn.addEventListener('click', () => {
+      mobileSidebar.classList.toggle('-translate-x-full');
+    });
+
+    // Hide sidebar when a menu item is clicked
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileSidebar.classList.add('-translate-x-full');  // Hide sidebar after click
+      });
+    })
 
     this.isDarkMode = localStorage.getItem('theme') === 'dark';
     this.updateDarkMode();
-
-    var topSec = document.querySelectorAll(".top");
-    console.log(topSec)
-
-    $(window).scroll(() => {
-      var topPos: any = $(topSec)?.offset()?.top;
-      var topBot = topPos + $(topSec).outerHeight(true);
-      if ($(window).scrollTop() > topBot) {
-        $(".sidebarNav").addClass("sidebarNavIn");
-      }
-      else {
-        $(".sidebarNav").removeClass("sidebarNavIn");
-      }
-    });
-
-    var sidebarNavButton = document.querySelectorAll(".sidebarNavItem");
-    var sidebarNavSection = document.querySelectorAll(".section");
-    var currentPageNumber = 0;
-    //checking for position to turn UX nav button orange
-
-    $(sidebarNavSection).each(function (index: any) {
-      var navSec = sidebarNavSection[index];
-      var navBut = sidebarNavButton[index];
+    if (!this.getIsTMobileResolution()) {
+      var topSec = document.querySelectorAll(".top");
 
 
-      $(window).scroll(function () {
-        var navPos = $(navSec).offset().top;
-        var secBot = navPos + $(navSec).outerHeight(true);
-
-        if ($(this).scrollTop() > navPos && $(this).scrollTop() < secBot) {
-          $(navBut).css("background-color", "#ccc");
-
+      $(window).scroll(() => {
+        var topPos: any = $(topSec)?.offset()?.top;
+        var topBot = topPos + $(topSec).outerHeight(true);
+        if ($(window).scrollTop() > topBot) {
+          $(".sidebarNav").addClass("sidebarNavIn");
         }
-
         else {
-          $(navBut).css("background-color", "initial");
+          $(".sidebarNav").removeClass("sidebarNavIn");
         }
       });
 
+      var sidebarNavButton = document.querySelectorAll(".sidebarNavItem");
+      var sidebarNavSection = document.querySelectorAll(".section");
+      //checking for position to turn UX nav button orange
 
-    });
+      $(sidebarNavSection).each(function (index: any) {
+        var navSec = sidebarNavSection[index];
+        var navBut = sidebarNavButton[index];
 
 
-    $(document).ready(() => {
-      // Add smooth scrolling to all links
-      $(".scrollLink").on('click', function (event: any) {
+        $(window).scroll(function () {
+          var navPos = $(navSec).offset().top;
+          var secBot = navPos + $(navSec).outerHeight(true);
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this['hash'] !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
+          if ($(this).scrollTop() > navPos && $(this).scrollTop() < secBot) {
+            $(navBut).css("background-color", "#ccc");
 
-          // Store hash
-          var hash = this['hash'];
+          }
 
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function () {
+          else {
+            $(navBut).css("background-color", "initial");
+          }
+        });
 
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
+
       });
-    });
 
+
+      $(document).ready(() => {
+        // Add smooth scrolling to all links
+        $(".scrollLink").on('click', function (event: any) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this['hash'] !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this['hash'];
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+    }
   }
 
   @HostListener('window:scroll', [])
@@ -149,6 +155,14 @@ export class SidebarComponent implements OnInit {
   updatePageNumber(pageNumber): void {
     // Example: Set the current page number to an element with ID `pageNumberDisplay`
     $('#pageNumberDisplay').text(pageNumber); // Ensure there's an element with this ID
+  }
+  toggleSidebar(): void {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('sidebarNavIn');
+  }
+  getIsTMobileResolution(): boolean {
+    return isMobileResolution();
+    console.log('kushan')
   }
 
 

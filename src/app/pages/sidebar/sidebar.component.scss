@@ -1,3 +1,4 @@
+// /* Sidebar Style */
 .sidebarNav {
   outline: 0px solid;
   width: 80px;
@@ -12,12 +13,13 @@
   overflow: hidden;
 }
 
+/* Active Sidebar Class */
 .sidebarNavIn {
   right: 0;
-  margin-right: 0px;
   opacity: 1;
 }
 
+/* Sidebar Item Style */
 .sidebarNavItem {
   width: 100%;
   height: 55px;
@@ -36,13 +38,60 @@
   font-weight: 100;
 }
 
+/* Sidebar Item Hover Style */
 .sidebarNavItem:hover {
-  outline: 0px;
-  /* background-image:linear-gradient(155deg, #ef6c00 25%, orange 75%); */
-  background-color: #ef6c00;
+  background-color: #ccc;
   transform: scale(1, 1);
 }
 
+/* Link Hover - No Underline */
 .sidebarNav a:hover {
   text-decoration: none;
+}
+
+/* Hamburger Button for Mobile */
+.hamburger {
+  display: none;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .sidebarNav {
+    width: 100%;
+    right: -100%;
+    top: 0;
+    opacity: 1;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
+
+  /* Expand sidebar fully on mobile */
+  .sidebarNavIn {
+    right: 0;
+    opacity: 1;
+  }
+
+  /* Adjust sidebar items for mobile */
+  .sidebarNavItem {
+    font-size: 16px;
+    padding-top: 20px;
+    height: 60px;
+  }
+  .show {
+    display: none;
+  }
 }

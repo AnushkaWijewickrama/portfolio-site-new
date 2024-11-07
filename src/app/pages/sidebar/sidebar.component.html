@@ -11,8 +11,8 @@
 </div>
 
 
-
-<div class="sidebarNav">
+<!-- Sidebar and Hamburger Menu HTML -->
+<div class="sidebarNav fixed lg:relative lg:flex flex-col z-40" id="sidebar">
     <a class="scrollLink" href="#section1">
         <div class="sidebarNavItem">Home</div>
     </a>
@@ -29,8 +29,36 @@
         <div class="sidebarNavItem">Contacts</div>
     </a>
 </div>
-<section class="top">
-</section>
+
+<!-- Hamburger Icon (Only visible on small screens) -->
+<button id="menu-btn" class="sm:hidden fixed top-4 left-4 z-50 text-gray-900 dark:text-gray-200 focus:outline-none">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+</button>
+
+<!-- Sidebar for mobile (hidden by default) -->
+<div id="mobileSidebar"
+    class="fixed inset-y-0 left-0 w-64 bg-gray-100 dark:bg-gray-800 p-4 transform -translate-x-full transition-transform duration-300 z-40">
+    <a class="scrollLink" href="#section1">
+        <div class="sidebarNavItem">Home</div>
+    </a>
+    <a class="scrollLink" href="#section2">
+        <div class="sidebarNavItem">About</div>
+    </a>
+    <a class="scrollLink" href="#section3">
+        <div class="sidebarNavItem">Experience</div>
+    </a>
+    <a class="scrollLink" href="#section4">
+        <div class="sidebarNavItem">Works</div>
+    </a>
+    <a class="scrollLink" href="#section5">
+        <div class="sidebarNavItem">Contacts</div>
+    </a>
+</div>
+
+<!-- Sections -->
+<section class="top"></section>
 <section class="section" name="section1" id="section1" #scrollContainer1>
     <app-home></app-home>
     <div id="pageNumberDisplay"
