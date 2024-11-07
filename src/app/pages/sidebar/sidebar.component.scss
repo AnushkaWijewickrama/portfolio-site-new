@@ -1,16 +1,7 @@
 // /* Sidebar Style */
 .sidebarNav {
   outline: 0px solid;
-  width: 80px;
-  transition: 0.3s;
-  position: fixed;
-  right: -55px;
-  top: 25px;
-  background-color: #22d3ee;
-  opacity: 0;
-  z-index: 1000;
-  border-radius: 7px 0px 0px 7px;
-  overflow: hidden;
+  width: 200px;
 }
 
 /* Active Sidebar Class */
@@ -26,16 +17,13 @@
   outline: 0px;
   border: 0px;
   display: block;
-  background-color: #aaa;
   border: 0px solid white;
   transition: 0.3s;
   text-align: center;
-  font-size: 12px;
+  font-size: 20px;
   margin-bottom: 2px;
   padding-top: 10px;
   color: white;
-  font-family: roboto, arial, sans-serif;
-  font-weight: 100;
 }
 
 /* Sidebar Item Hover Style */
@@ -90,8 +78,5 @@
     font-size: 16px;
     padding-top: 20px;
     height: 60px;
-  }
-  .show {
-    display: none;
   }
 }

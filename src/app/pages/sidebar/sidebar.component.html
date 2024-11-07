@@ -1,4 +1,4 @@
-<div class="dark:bg-gray-900 flex justify-end">
+<div class="dark:bg-gray-900 flex justify-end bg-gray-100">
     <label class="inline-flex items-center cursor-pointer mt-4">
         <input (click)="toggleDarkMode()" type="checkbox" value="" class="sr-only peer">
         <div
@@ -10,9 +10,8 @@
     </label>
 </div>
 
-
-<!-- Sidebar and Hamburger Menu HTML -->
-<div class="sidebarNav fixed lg:relative lg:flex flex-col z-40" id="sidebar">
+<div class="sidebarNav fixed top-0 left-0 h-full w-[250px] rounded bg-cyan-500 dark:bg-gray-800 p-4 z-40 hidden lg:flex flex-col"
+    id="sidebar">
     <a class="scrollLink" href="#section1">
         <div class="sidebarNavItem">Home</div>
     </a>
@@ -30,16 +29,16 @@
     </a>
 </div>
 
-<!-- Hamburger Icon (Only visible on small screens) -->
+<!-- Hamburger Icon for mobile screens (visible only on small screens) -->
 <button id="menu-btn" class="sm:hidden fixed top-4 left-4 z-50 text-gray-900 dark:text-gray-200 focus:outline-none">
     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
     </svg>
 </button>
 
-<!-- Sidebar for mobile (hidden by default) -->
+<!-- Sidebar for mobile screens (hidden by default) -->
 <div id="mobileSidebar"
-    class="fixed inset-y-0 left-0 w-64 bg-gray-100 dark:bg-gray-800 p-4 transform -translate-x-full transition-transform duration-300 z-40">
+    class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 p-4 transform -translate-x-full transition-transform duration-300 z-40 lg:hidden">
     <a class="scrollLink" href="#section1">
         <div class="sidebarNavItem">Home</div>
     </a>
@@ -58,23 +57,34 @@
 </div>
 
 <!-- Sections -->
-<section class="top"></section>
-<section class="section" name="section1" id="section1" #scrollContainer1>
-    <app-home></app-home>
-    <div id="pageNumberDisplay"
-        class="fixed text-[15rem] sm:text-[25rem] md:text-[30rem] text-black dark:text-white font-bold right-12 sm:right-16 md:right-20 top-1/4 transform -translate-y-1/4 opacity-10 pointer-events-none">
-        {{ '0'+currentSection }}
-    </div>
-</section>
-<section class="section" name="section2" id="section2" #scrollContainer2>
-    <app-about></app-about>
-</section>
-<section class="section" name="section3" id="section3" #scrollContainer3>
-    <app-experience></app-experience>
-</section>
-<section class="section" name="section4" id="section4" #scrollContainer4>
-    <app-works></app-works>
-</section>
-<section class="section" name="section5" id="section5" #scrollContainer5>
-    <app-contacts></app-contacts>
-</section>
+<div class="content-container lg:pl-[200px]">
+    <section class="top"></section>
+
+    <section class="section" name="section1" id="section1" #scrollContainer1>
+        <app-home></app-home>
+        <div id="pageNumberDisplay"
+            class="fixed text-[15rem] sm:text-[25rem] md:text-[30rem] text-gray-900 dark:text-gray-100 font-bold right-12 sm:right-16 md:right-20 top-1/4 transform -translate-y-1/4 opacity-10 pointer-events-none">
+            {{ '0' + currentSection }}
+        </div>
+    </section>
+
+    <section class="section bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100" name="section2" id="section2"
+        #scrollContainer2>
+        <app-about></app-about>
+    </section>
+
+    <section class="section bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100" name="section3" id="section3"
+        #scrollContainer3>
+        <app-experience></app-experience>
+    </section>
+
+    <section class="section bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100" name="section4" id="section4"
+        #scrollContainer4>
+        <app-works></app-works>
+    </section>
+
+    <section class="section bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100" name="section5" id="section5"
+        #scrollContainer5>
+        <app-contacts></app-contacts>
+    </section>
+</div>

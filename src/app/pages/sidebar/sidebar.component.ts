@@ -56,7 +56,7 @@ export class SidebarComponent implements OnInit {
           $(".sidebarNav").addClass("sidebarNavIn");
         }
         else {
-          $(".sidebarNav").removeClass("sidebarNavIn");
+          // $(".sidebarNav").removeClass("sidebarNavIn");
         }
       });
 
@@ -74,12 +74,12 @@ export class SidebarComponent implements OnInit {
           var secBot = navPos + $(navSec).outerHeight(true);
 
           if ($(this).scrollTop() > navPos && $(this).scrollTop() < secBot) {
-            $(navBut).css("background-color", "#ccc");
+            $(navBut).css("text-decoration", "underline");
 
           }
 
           else {
-            $(navBut).css("background-color", "initial");
+            $(navBut).css("text-decoration", "initial");
           }
         });
 
