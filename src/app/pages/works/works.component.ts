@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-works',
   standalone: true,
   imports: [],
-  templateUrl: './works.component.html',
-  styleUrl: './works.component.scss'
+  templateUrl: './works.component.html'
 })
 export class WorksComponent {
 

@@ -6,8 +6,7 @@ import { SidebarComponent } from "./pages/sidebar/sidebar.component";
   selector: 'app-root',
   standalone: true,
   imports: [SidebarComponent, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'portfolio-site';
