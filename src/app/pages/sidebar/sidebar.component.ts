@@ -69,9 +69,10 @@ export class SidebarComponent implements OnInit {
         const secBot = navPos + navSec.offsetHeight;
 
         if (window.scrollY > navPos && window.scrollY < secBot) {
-          navBut.style.textDecoration = "underline";
+          navBut.classList.add("scroll-underline")
         } else {
-          navBut.style.textDecoration = "initial";
+          navBut.classList.remove("scroll-underline")
+
         }
       });
     });

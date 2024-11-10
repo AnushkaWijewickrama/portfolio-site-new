@@ -1,42 +1,36 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 p-6 sm:p-8">
-    <div
-        class="relative bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-xl shadow-lg max-w-5xl w-full flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
-
-        <!-- Profile Image with Background Shape -->
-        <div
-            class="relative w-full sm:w-1/2 h-64 sm:h-96 rounded-full overflow-hidden bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center">
-            <img src="/anushka.JPG" alt="Profile" class="w-32 h-32 sm:w-48 sm:h-48 object-cover rounded-full shadow-md">
+<section
+    class="flex flex-col items-center justify-center bg-white dark:bg-gray-900 p-8 animate__animated animate__fadeInUp">
+    <div class="flex flex-col sm:flex-row items-center space-y-8 sm:space-y-0 sm:space-x-12">
+        <!-- Image with Background Shape -->
+        <div class="relative">
+            <!-- Enlarged Background Shape with Dark Mode Color -->
+            <div
+                class="w-48 h-48 sm:w-80 sm:h-80 bg-[#28BEF0] dark:bg-[#1D4E89] rounded-[30%] absolute top-0 left-0 transform -translate-x-4 sm:-translate-x-8 -translate-y-4 sm:-translate-y-8">
+            </div>
+            <!-- Enlarged Profile Image -->
+            <img src="/anushka.JPG" alt="Anushka Wijewickrama"
+                class="relative w-48 h-48 sm:w-80 sm:h-80 object-cover rounded-full">
         </div>
 
         <!-- Text Section -->
-        <div class="text-center sm:text-left w-full sm:w-1/2 space-y-4">
-            <p class="text-md sm:text-lg text-gray-500 dark:text-gray-300 uppercase tracking-wider">Developer</p>
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-                Anushka Wijewickrama
-            </h1>
-            <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
-                Passionate developer with a knack for crafting visually engaging and functional web applications.
-            </p>
+        <div class="text-center sm:text-left">
+            <p class="text-gray-500 dark:text-gray-400 uppercase text-sm tracking-widest mb-2">Designer / Developer</p>
+            <h1 class="text-4xl sm:text-7xl font-bold text-gray-900 dark:text-white">Anushka<br>Wijewickrama</h1>
         </div>
-
-        <!-- Background Number (decorative) -->
-        <!-- <div
-            class="absolute text-[10rem] sm:text-[15rem] md:text-[20rem] text-black dark:text-white font-bold right-4 sm:right-8 top-1/2 transform -translate-y-1/2 opacity-10 pointer-events-none">
-            01
-        </div> -->
     </div>
-</div>
+</section>
 
-<section class="flex flex-col sm:flex-row items-center justify-center py-8 sm:py-12 dark:bg-gray-900">
-    <div class="flex flex-col sm:flex-row sm:space-x-8">
-        <div class="text-center mb-4 sm:mb-0">
+<section
+    class="flex flex-col items-center justify-center py-8 sm:py-12 dark:bg-gray-900 space-y-6 sm:space-y-0 animate__animated animate__fadeInUp">
+    <div class="flex flex-col sm:flex-row items-center sm:space-x-8 space-y-4 sm:space-y-0 text-center">
+        <div class="w-60 sm:w-auto">
             <span class="text-gray-400 dark:text-gray-500 font-medium text-sm">01</span>
             <h3 class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-200 mt-2">UI/UX Design</h3>
             <p class="text-gray-500 dark:text-gray-400 mt-2 text-xs">
                 At in proin consequat ut cursus venenatis sapien.
             </p>
         </div>
-        <div class="text-center mb-4 sm:mb-0">
+        <div class="w-60 sm:w-auto">
             <span class="text-gray-400 dark:text-gray-500 font-medium text-sm">02</span>
             <h3 class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-200 mt-2">Backend Developer</h3>
             <p class="text-gray-500 dark:text-gray-400 mt-2 text-xs">
@@ -45,7 +39,7 @@
         </div>
 
         <!-- Button -->
-        <div class="flex items-center justify-center mt-4 sm:mt-0">
+        <div class="w-full flex justify-center mt-4 sm:mt-0">
             <a routerLink="/works"
                 class="bg-gray-800 dark:bg-gray-700 text-white px-6 py-3 font-semibold text-sm rounded hover:bg-gray-900 dark:hover:bg-gray-600 transition">
                 VIEW ALL WORK
