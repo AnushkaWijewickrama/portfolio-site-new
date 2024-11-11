@@ -1,0 +1,55 @@
+/* Scroll-Underline Animation */
+.scroll-underline {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Underline Animation Setup */
+.scroll-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform-origin: left;
+  transform: scaleX(0); /* Start with no underline */
+  animation: underline-grow 0.5s ease forwards; /* Run animation forwards once */
+}
+
+/* Underline Animation on Hover */
+.scroll-underline:hover::after {
+  transform: translateX(0);
+  animation: scroll-underline 1s ease-out forwards;
+}
+
+@keyframes underline-grow {
+  0% {
+    transform: scaleX(0); /* Start hidden */
+  }
+  100% {
+    transform: scaleX(1); /* End fully visible */
+  }
+}
+
+/* Hamburger Button for Mobile */
+.hamburger {
+  display: none;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
