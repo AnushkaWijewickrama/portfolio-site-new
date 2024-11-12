@@ -3,6 +3,7 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  width: 150px !important;
 }
 
 /* Underline Animation Setup */
@@ -12,7 +13,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: #4d2aa0;
   transform-origin: left;
   transform: scaleX(0); /* Start with no underline */
@@ -48,7 +49,7 @@
   z-index: 1001;
 }
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hamburger {
     display: block;
   }

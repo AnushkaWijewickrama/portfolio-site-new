@@ -3,13 +3,15 @@ import { AboutComponent } from "../../pages/about/about.component";
 import { ContactsComponent } from "../../pages/contacts/contacts.component";
 import { HeroComponent } from "../../pages/hero/hero.component";
 import { ProjectsComponent } from "../../pages/projects/projects.component";
+import { isMobileResolution } from '../../shared/util/common-util';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
-  imports: [ContactsComponent, HeroComponent, ProjectsComponent, AboutComponent]
+  imports: [ContactsComponent, HeroComponent, ProjectsComponent, AboutComponent, NgIf]
 })
 export class SidebarComponent implements OnInit {
 
@@ -32,17 +34,20 @@ export class SidebarComponent implements OnInit {
   setupMobileMenuToggle(): void {
     const menuBtn = document.getElementById('menu-btn');
     const mobileSidebar = document.getElementById('mobileSidebar');
-    const sidebarLinks = document.querySelectorAll('#mobileSidebar .scrollLink');
 
-    menuBtn?.addEventListener('click', () => {
-      mobileSidebar?.classList.toggle('-translate-x-full');
-    });
-
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileSidebar?.classList.add('-translate-x-full');
+    if (menuBtn && mobileSidebar) {
+      menuBtn.addEventListener('click', () => {
+        mobileSidebar.classList.toggle('-translate-x-full');
       });
-    });
+
+      // Close sidebar on link click for mobile
+      const sidebarLinks = Array.from(mobileSidebar.querySelectorAll('.scrollLink')) as HTMLElement[];
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileSidebar.classList.add('-translate-x-full');
+        });
+      });
+    }
   }
 
   setupScrollLinks(): void {
@@ -115,5 +120,8 @@ export class SidebarComponent implements OnInit {
     } else {
       this.renderer.removeClass(document.documentElement, 'dark');
     }
+  }
+  getIsMobileResolution(): boolean {
+    return isMobileResolution();
   }
 }
