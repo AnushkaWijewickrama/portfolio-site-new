@@ -9,6 +9,4 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   templateUrl: './app.component.html',
 
 })
-export class AppComponent {
-  title = 'portfolio-site';
-}
+export class AppComponent { }
