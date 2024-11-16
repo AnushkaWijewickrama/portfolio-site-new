@@ -66,10 +66,10 @@ export class SidebarComponent implements OnInit {
 
             window.scrollTo({
               top: topPosition,
-              behavior: "smooth",
+              behavior: "auto",
             });
 
-            history.pushState(null, "", hash);
+            location.hash = hash;
           }
         }
       });
