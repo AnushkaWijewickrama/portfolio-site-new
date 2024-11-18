@@ -3,31 +3,13 @@
 }
 .scroll-underline::after {
   content: "";
-  @apply absolute bottom-0 left-0 w-full h-[1px] bg-blue-600;
-  transform-origin: left;
-  transform: scaleX(0);
-  animation: underline-grow 0.5s ease forwards;
+  @apply absolute bottom-0 left-0 w-full h-[1px] bg-blue-600 animate-underline-grow transform origin-left scale-x-0;
 }
 
 .scroll-underline:hover::after {
-  transform: translateX(0);
-  animation: scroll-underline 1s ease-out forwards;
-}
-
-@keyframes underline-grow {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
+  @apply transform translate-x-0 animate-[scroll-underline_1s_ease-out_forwards];
 }
 
 .hamburger {
   @apply hidden fixed right-4 top-4 text-2xl bg-none border-none text-white cursor-pointer z-[1001];
-}
-@media (max-width: 1024px) {
-  .hamburger {
-    @apply block;
-  }
 }
