@@ -16,7 +16,7 @@ import { NgIf } from '@angular/common';
 export class SidebarComponent implements OnInit {
 
   currentSection: number = 1;
-  isDarkMode = false;
+  isDarkMode: boolean = false;
 
   constructor(private renderer: Renderer2) { }
 
