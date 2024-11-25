@@ -74,48 +74,51 @@
 
 <!-- Sidebar for mobile screens (hidden by default) -->
 <div id="mobileSidebar"
-    class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 p-4 transform -translate-x-full transition-transform duration-300 z-40 lg:hidden">
+    class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 p-4 transform -translate-x-full transition-transform duration-300 z-40 lg:hidden flex flex-col justify-between">
 
     <!-- Logo -->
-    <h1 class="text-2xl font-bold mb-8 mt-7 dark:text-white">Anushka<span class="text-black dark:text-white">.</span>
+    <h1 class="text-2xl font-bold mb-8 mt-7 dark:text-white">
+        Anushka<span class="text-black dark:text-white">.</span>
     </h1>
 
     <!-- Navigation Links -->
-    <nav class="mt-8 space-y-6 text-lg">
+    <nav class="space-y-6 text-lg flex-1">
         <a href="#section1"
-            class="block  scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
+            class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
             Home
         </a>
         <a href="#section2"
-            class="block  scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
+            class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
             About
         </a>
         <a href="#section3"
-            class="block  scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
+            class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
             Projects
         </a>
         <a href="#section4"
-            class="block  scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
+            class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">
             Contact
         </a>
     </nav>
-    <div class="mt-6 mb-4  w-full fixed bottom-[8rem]">
+
+    <!-- Dark Mode Toggle -->
+    <div class="mb-4 fixed bottom-[8rem] w-full">
         <label class="flex items-center cursor-pointer">
             <input (click)="toggleDarkMode()" type="checkbox" class="sr-only peer">
             <div
                 class="relative w-11 h-6 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
             </div>
-            <span class="ml-3 dark:text-gray-300 text-gray-800 text-xs">
+            <span class="ml-3 text-xs text-gray-800 dark:text-gray-300">
                 {{ isDarkMode ? 'Light' : 'Dark' }}
             </span>
         </label>
     </div>
-    <div class="w-full mt-4 mb-2 fixed bottom-10">
-        <!-- Email -->
-        <a href="mailto:kushan.anushka6060@gmail.com"
-            class="text-xs mb-4 dark:text-gray-300 text-gray-800">{{"kushan.anushka6060@gmail.com"}}</a>
 
-        <!-- Social Links -->
+    <!-- Footer -->
+    <div class="fixed bottom-10 w-full">
+        <a href="mailto:kushan.anushka6060@gmail.com" class="block text-xs mb-4 text-gray-800 dark:text-gray-300">
+            {{"kushan.anushka6060@gmail.com"}}
+        </a>
         <div class="flex space-x-4 mb-4">
             <a href="https://github.com/AnushkaWijewickrama/" target="_blank"
                 class="text-gray-800 dark:text-gray-300 hover:text-blue-500">
@@ -126,11 +129,10 @@
                 <i class="fab fa-linkedin text-2xl"></i>
             </a>
         </div>
-
-        <!-- Footer Text -->
-        <p class="text-left text-xs text-gray-600 dark:text-gray-400">2024 - Anushka Wijewikrama</p>
+        <p class="text-xs text-gray-600 dark:text-gray-400">2024 - Anushka Wijewickrama</p>
     </div>
 </div>
+
 
 <!-- Sections -->
 <div class="content-container lg:pl-[200px]">

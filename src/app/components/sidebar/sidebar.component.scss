@@ -1,5 +1,5 @@
 .scroll-underline {
-  @apply relative inline-block w-full sm:w-[150px];
+  @apply relative inline-block w-full sm:w-[150px] md:w-[100%] lg:w-[150px];
 }
 .scroll-underline::after {
   content: "";
