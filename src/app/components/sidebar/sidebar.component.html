@@ -141,7 +141,13 @@
     </section>
 
     <section class="section" name="section2" id="section2">
-        <app-about></app-about>
+        <div class="container mx-auto px-5">
+            <div class="flex flex-wrap" data-aos="fade-up">
+                <div class="w-full lg:w-1/2 pb-5 px-5" *ngFor="let item of aboutItems">
+                    <app-about [subTitle]="item?.subTitle" [title]="item?.title" [details]="item?.details"></app-about>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="section bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100" name="section3" id="section3">

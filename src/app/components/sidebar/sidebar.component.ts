@@ -4,20 +4,94 @@ import { ContactsComponent } from "../../pages/contacts/contacts.component";
 import { HeroComponent } from "../../pages/hero/hero.component";
 import { ProjectsComponent } from "../../pages/projects/projects.component";
 import { isMobileResolution } from '../../shared/util/common-util';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
-  imports: [ContactsComponent, HeroComponent, ProjectsComponent, AboutComponent, NgIf]
+  imports: [ContactsComponent, HeroComponent, ProjectsComponent, AboutComponent, NgIf, NgFor]
 })
 export class SidebarComponent implements OnInit {
 
   currentSection: number = 1;
   isDarkMode: boolean = false;
+  aboutItems = [
+    {
+      subTitle: 'Biodata',
+      title: 'Education',
+      details: [
+        {
+          date: '1998 - 2004',
+          description: 'Bachelors in Engineering in Information Technology',
+          subDescription: 'Harvard School of Science and Management',
+        },
+        {
+          date: '2004 - 2006',
+          description: 'Masters in Data Analysis',
+          subDescription: 'Harvard School of Science and Management',
+        }
+      ],
 
+    },
+    {
+      subTitle: null,
+      title: 'Experiences',
+      details: [
+        {
+          date: '2007 - 2012',
+          description: 'Creative Agency Inc.: Design Head',
+          subDescription: 'Managed creative teams to deliver high-quality designs.',
+        },
+        {
+          date: '2013 - Present',
+          description: 'Studio Alpha: Project Manager',
+          subDescription: 'Oversee projects ensuring timely delivery and client satisfaction.',
+        }
+      ],
+
+    },
+    {
+      subTitle: null,
+      title: 'Interests',
+      details: [
+        {
+          date: null,
+          description: 'Innovating with Technology',
+          subDescription: 'Passionate about leveraging technology for positive change.',
+        },
+        {
+          date: null,
+          description: 'Designing Solutions',
+          subDescription: 'Love creating innovative solutions to complex problems.',
+        },
+        {
+          date: '1998 - 2004',
+          description: 'Bachelors in Engineering in Information Technology',
+          subDescription: 'Harvard School of Science and Management',
+        }
+      ],
+
+    },
+    {
+      subTitle: null,
+      title: 'References',
+      details: [
+        {
+          date: '1998 - 2004',
+          description: 'Dr. Stephen H. King',
+          subDescription: 'Expert in strategic management and mentorship.',
+        },
+        {
+          date: '2004 - 2006',
+          description: 'Dr. David Howard',
+          subDescription: 'Renowned professor and career guide in technology.',
+        }
+      ],
+
+    },
+  ];
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
