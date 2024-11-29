@@ -59,10 +59,6 @@
     </div>
 </div>
 
-
-
-
-
 <!-- Hamburger Icon for mobile screens (visible only on small screens) -->
 <button id="menu-btn"
     class="lg:hidden fixed top-4 right-4 mb-4 z-50 text-gray-600 dark:text-gray-400 focus:outline-none">
@@ -131,29 +127,4 @@
         </div>
         <p class="text-xs text-gray-600 dark:text-gray-400">2024 - Anushka Wijewickrama</p>
     </div>
-</div>
-
-
-<!-- Sections -->
-<div class="content-container lg:pl-[200px]">
-    <section class="section" name="section1" id="section1">
-        <app-hero></app-hero>
-    </section>
-
-    <section class="section" name="section2" id="section2">
-        <div class="container mx-auto px-5">
-            <div class="flex flex-wrap" data-aos="fade-up">
-                <div class="w-full lg:w-1/2 pb-5 px-5" *ngFor="let item of aboutItems">
-                    <app-about [subTitle]="item?.subTitle" [title]="item?.title" [details]="item?.details"></app-about>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100" name="section3" id="section3">
-        <app-projects></app-projects>
-    </section>
-    <section class="section bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100" name="section4" id="section4">
-        <app-contacts></app-contacts>
-    </section>
 </div>
