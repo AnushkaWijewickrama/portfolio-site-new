@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { IButton } from '../../../shared/model/button.model';
 
 @Component({
   selector: 'app-buttons',
@@ -9,6 +10,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './button.component.html'
 })
 export class ButtonComponent {
-  @Input() class: string = ''
+  @Input() class: IButton
   @Input() title: string = ''
 }
