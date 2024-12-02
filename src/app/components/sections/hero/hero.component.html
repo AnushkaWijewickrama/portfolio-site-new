@@ -1,39 +1,35 @@
-<div class="bg-white dark:bg-gray-900">
-    <div class="flex flex-col items-center px-4 mx-4 lg:px-16 lg:mx-14">
-
-        <section id="home" class="py-[3rem] relative bg-white dark:bg-gray-900" data-text="01">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <!-- Banner Image -->
-                <div class="flex justify-center items-start" data-aos="fade-right">
-                    <img src="/banner-image.png" alt="banner"
-                        class="max-w-[95%] lg:max-w-[95%] h-auto mx-auto rounded-full">
-                </div>
-                <!-- Banner Content -->
-                <div class="my-4 lg:pt-12 text-center lg:text-left" data-aos="fade-right">
-                    <span class="text-xs text-gray-500 dark:text-gray-400 uppercase">Designer / Developer</span>
-                    <h1
-                        class="text-6xl sm:text-5xl lg:text-[10rem] font-bold tracking-tight leading-tight text-gray-900 dark:text-white mt-6">
-                        Julia Stiles
-                    </h1>
-                </div>
+<div class="dark:bg-gray-900 bg-white px-4 mx-4 md:px-10 md:mx-8 lg:px-16 lg:mx-14">
+    <section id="about" class="my-5 py-5 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Banner Image -->
+            <div class="flex justify-center items-start" data-aos="fade-right">
+                <img src="/banner-image.png" alt="banner"
+                    class="max-w-[90%] lg:max-w-[90%] h-auto mx-auto rounded-full">
+            </div>
+            <!-- Banner Content -->
+            <div class="my-4 lg:pt-12 text-center lg:text-left" data-aos="fade-right">
+                <span class="text-xs text-gray-500 dark:text-gray-400 uppercase">Designer / Developer</span>
+                <h1
+                    class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[10rem] font-bold tracking-tight leading-tight text-gray-900 dark:text-white">
+                    Julia Stiles
+                </h1>
 
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-                <!-- Column 1 -->
-                <div class="icon-box flex items-center justify-center p-4 rounded-lg" data-aos="fade-up">
-                    <p class="text-gray-600 dark:text-gray-300 text-center text-xl sm:text-lg md:text-lg lg:text-xl">
-                        Front-end Developer with over 2 years of experience.
-                    </p>
-                </div>
-                <!-- Column 2 -->
-                <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
-                    <app-buttons [buttonTextColor]="'text-white'" [buttonBackgroundColor]="'bg-gray-900'"
-                        [buttonCapitalizer]="'uppercase'" [buttonBordeRadius]="'rounded-lg'"></app-buttons>
-                </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+            <!-- Column 1 -->
+            <div class="icon-box flex items-center justify-center p-4 rounded-lg" data-aos="fade-up">
+                <p class="text-gray-600 dark:text-gray-300 text-center text-xl sm:text-lg md:text-lg lg:text-xl">
+                    Front-end Developer with over 2 years of experience.
+                </p>
             </div>
+            <!-- Column 2 -->
+            <div class="flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
+                <app-buttons [class]="'dark'" [title]="'View All Work'"></app-buttons>
+            </div>
+        </div>
 
-        </section>
-    </div>
-
+    </section>
 </div>
