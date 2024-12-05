@@ -11,5 +11,5 @@ import { IButton } from '../../../shared/model/button.model';
 })
 export class ButtonComponent {
   @Input() class: IButton
-  @Input() title: string = ''
+  @Input() label: string = ''
 }
