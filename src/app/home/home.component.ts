@@ -1,22 +1,19 @@
 import { Component } from '@angular/core';
-import AOS from 'aos';
-import { SidebarComponent } from "./components/sidebar/sidebar.component";
-import { HeroComponent } from "./components/sections/hero/hero.component";
-import { AboutComponent } from "./components/sections/about/about.component";
-import { ProjectsComponent } from "./components/sections/projects/projects.component";
-import { ContactsComponent } from "./components/sections/contacts/contacts.component";
+import { SidebarComponent } from "../components/sidebar/sidebar.component";
+import { HeroComponent } from "../components/sections/hero/hero.component";
+import { AboutComponent } from "../components/sections/about/about.component";
+import { ProjectsComponent } from "../components/sections/projects/projects.component";
+import { ContactsComponent } from "../components/sections/contacts/contacts.component";
+import { IAboutItems } from '../shared/model/aboutItems.model';
 import { NgFor } from '@angular/common';
-import { IAboutItems } from './shared/model/aboutItems.model';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
-  imports: [SidebarComponent, HeroComponent, AboutComponent, ProjectsComponent, ContactsComponent, NgFor, RouterOutlet],
-  templateUrl: './app.component.html',
-
+  imports: [SidebarComponent, HeroComponent, AboutComponent, ProjectsComponent, ContactsComponent, NgFor],
+  templateUrl: './home.component.html'
 })
-export class AppComponent {
+export class HomeComponent {
 
   aboutItems: IAboutItems[] = [
     {
@@ -94,12 +91,4 @@ export class AppComponent {
     },
   ];
 
-  ngOnInit(): void {
-    AOS.init({
-      duration: 1000, // Animation duration (optional)
-      easing: 'ease-in-out', // Easing type (optional)
-      once: false, // Animation only once (optional)
-      mirror: false // No repeat on scroll up (optional)
-    });
-  }
 }
