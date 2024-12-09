@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { isMobileResolution } from '../../shared/util/common-util';
 import { NgIf } from '@angular/common';
+import { SectionService } from '../../shared/util/sections.service ';
 
 
 @Component({
@@ -15,12 +16,13 @@ export class SidebarComponent implements OnInit {
   currentSection: number = 1;
   isDarkMode: boolean = false;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private sectionService: SectionService) { }
 
   ngOnInit(): void {
     this.setupMobileMenuToggle();
     this.isDarkMode = localStorage.getItem('theme') === 'dark';
     this.updateDarkMode();
+
   }
 
   ngAfterViewInit(): void {

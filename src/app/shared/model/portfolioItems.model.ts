@@ -1,3 +1,4 @@
+import { Stack } from "./stack.model";
 
 
 export interface IPortfolioItems {
@@ -5,7 +6,8 @@ export interface IPortfolioItems {
   image?: string,
   format?: string,
   formatColor?: string,
-  link?: string
+  link?: string,
+  stack?: Stack[]
 }
 
 export class PortfolioItems implements IPortfolioItems {
@@ -14,6 +16,7 @@ export class PortfolioItems implements IPortfolioItems {
     public image?: string,
     public format?: string,
     public formatColor?: string,
-    public link?: string
+    public link?: string,
+    public stack?: Stack[]
   ) { }
 }

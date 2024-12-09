@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SidebarComponent } from "../../../sidebar/sidebar.component";
 import { ProjectData } from '../../../../shared/model/projectData.model';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-pagedetail',
   standalone: true,
-  imports: [SidebarComponent],
-  templateUrl: './projectdetail.component.html',
+  imports: [SidebarComponent, NgIf, NgFor],
+  templateUrl: './projectdetail.component.html'
 })
 export class ProjectdetailComponent implements OnInit {
-
+  // List of images for the slider
+  images: any = ['projects/projectdetails/1.jpg', 'projects/projectdetails/2.jpg', 'projects/projectdetails/3.jpg']; // Add your image paths here
+  currentImageIndex: number = 0;
   projectsData: ProjectData[] = [
     {
       code: "0001D",
@@ -65,6 +68,23 @@ export class ProjectdetailComponent implements OnInit {
         }
       }))
     })
+  }
+  // Go to the previous image
+  prevImage(): void {
+    if (this.currentImageIndex > 0) {
+      this.currentImageIndex--;
+    } else {
+      this.currentImageIndex = this.images.length - 1;
+    }
+  }
+
+  // Go to the next image
+  nextImage(): void {
+    if (this.currentImageIndex < this.images.length - 1) {
+      this.currentImageIndex++;
+    } else {
+      this.currentImageIndex = 0;
+    }
   }
 
 }

@@ -1,4 +1,4 @@
-<div class="dark:bg-gray-900 bg-white px-4 mx-4 md:px-10 md:mx-8 lg:px-16 lg:mx-14">
+<!-- <div class="dark:bg-gray-900 bg-white px-4 mx-4 md:px-10 md:mx-8 lg:px-16 lg:mx-14">
     <main class="lg:col-span-10 lg:ml-auto">
         <div class="container mx-auto">
 
@@ -44,5 +44,48 @@
             </div>
         </div>
     </main>
+
+</div> -->
+<app-sidebar></app-sidebar>
+<div class="content-container lg:pl-[200px]">
+    <div class="container mx-auto px-3">
+        <div class="flex flex-wrap" data-aos="fade-up">
+            <div class="relative mx-auto w-full h-screen">
+                <!-- Image Slider -->
+                <div class="relative w-full h-full overflow-hidden flex items-center justify-center">
+                    <ng-container *ngFor="let image of images; let i = index">
+                        <img [src]="image" *ngIf="currentImageIndex === i"
+                            class="w-full max-w-[90%] max-h-[80%] object-contain transition-opacity duration-700"
+                            alt="slider-image" />
+                    </ng-container>
+                </div>
+
+                <!-- Info Section -->
+                <div
+                    class="absolute bottom-5 right-0 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-300 p-3 rounded-md max-w-xs sm:max-w-md sm:p-4">
+                    <h4 class="text-xl sm:text-3xl font-semibold">Elegant Urban Oasis</h4>
+                    <ul class="space-y-1 sm:space-y-2">
+                        <li><span class="font-bold">Clients:</span> Sogeprom</li>
+                        <li><span class="font-bold">Area:</span> 14,891 m²</li>
+                        <li><span class="font-bold">Project year:</span> 2022</li>
+                        <li><span class="font-bold">Project type:</span> Tertiary, Interior design</li>
+                        <li><span class="font-bold">Location:</span> Rio de Janeiro</li>
+                        <li><span class="font-bold">Team:</span> Russell Otten, Gabriel Ranieri, Raissa Furlan, Maria
+                            Pereira</li>
+                    </ul>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button (click)="prevImage()"
+                    class="absolute bg-gray-900 text-white p-2 rounded-full left-3 top-1/2 transform -translate-y-1/2 lg:left-4">
+                    &#8592;
+                </button>
+                <button (click)="nextImage()"
+                    class="absolute bg-gray-900 text-white p-2 rounded-full right-3 top-1/2 transform -translate-y-1/2 lg:right-4">
+                    &#8594;
+                </button>
+            </div>
+        </div>
+    </div>
 
 </div>

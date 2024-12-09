@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from "../components/sidebar/sidebar.component";
+import { IAboutItems } from '../shared/model/aboutItems.model';
 import { HeroComponent } from "../components/sections/hero/hero.component";
 import { AboutComponent } from "../components/sections/about/about.component";
 import { ProjectsComponent } from "../components/sections/projects/projects.component";
 import { ContactsComponent } from "../components/sections/contacts/contacts.component";
-import { IAboutItems } from '../shared/model/aboutItems.model';
 import { NgFor } from '@angular/common';
+import { SectionService } from '../shared/util/sections.service ';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,13 @@ import { NgFor } from '@angular/common';
   imports: [SidebarComponent, HeroComponent, AboutComponent, ProjectsComponent, ContactsComponent, NgFor],
   templateUrl: './home.component.html'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  selectedSection: string = ''
+
+  constructor(private sectionService: SectionService, private route: Router) { }
+
+  ngOnInit(): void {
+  }
 
   aboutItems: IAboutItems[] = [
     {
