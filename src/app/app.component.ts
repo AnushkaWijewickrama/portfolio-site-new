@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import AOS from 'aos';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -11,12 +10,4 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
-  ngOnInit(): void {
-    AOS.init({
-      duration: 1000, // Animation duration (optional)
-      easing: 'ease-in-out', // Easing type (optional)
-      once: false, // Animation only once (optional)
-      mirror: false // No repeat on scroll up (optional)
-    });
-  }
 }

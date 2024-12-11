@@ -8,6 +8,8 @@ import { ContactsComponent } from "../components/sections/contacts/contacts.comp
 import { NgFor } from '@angular/common';
 import { SectionService } from '../shared/util/sections.service ';
 import { Router } from '@angular/router';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-home',
@@ -21,6 +23,12 @@ export class HomeComponent implements OnInit {
   constructor(private sectionService: SectionService, private route: Router) { }
 
   ngOnInit(): void {
+    AOS.init({
+      duration: 1000, // Animation duration (optional)
+      easing: 'ease-in-out', // Easing type (optional)
+      once: false, // Animation only once (optional)
+      mirror: false // No repeat on scroll up (optional)
+    });
   }
 
   aboutItems: IAboutItems[] = [
