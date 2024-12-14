@@ -8,6 +8,6 @@ export const routes: Routes = [
 
     },
     {
-        path: 'projectdetail/:code', component: ProjectdetailComponent
+        path: ':project', component: ProjectdetailComponent
     },
 ];

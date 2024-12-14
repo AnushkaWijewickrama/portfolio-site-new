@@ -18,9 +18,8 @@ import AOS from 'aos';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  selectedSection: string = ''
 
-  constructor(private sectionService: SectionService, private route: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     AOS.init({

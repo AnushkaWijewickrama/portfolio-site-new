@@ -18,8 +18,8 @@ export class ProjectsComponent {
       format: "SVG",
       formatColor: "bg-orange-500",
       link: "0001D",
-      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'Bootstrap' }, { title: 'SCSS' }]
-
+      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'Bootstrap' }, { title: 'SCSS' }],
+      code: 'Nostalgia_Portrait_Copy'
     },
     {
       title: "Workoholic City Design",
@@ -27,8 +27,8 @@ export class ProjectsComponent {
       format: "SVG",
       formatColor: "bg-orange-500",
       link: "0002D",
-      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }]
-
+      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }],
+      code: 'Workoholic_City_Design'
     },
     {
       title: "Zoo Keeper Envelope",
@@ -36,8 +36,8 @@ export class ProjectsComponent {
       format: "PSD",
       formatColor: "bg-blue-500",
       link: "0003D",
-      stack: [{ title: 'Angular' }, { title: 'JavaScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }]
-
+      stack: [{ title: 'Angular' }, { title: 'JavaScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }],
+      code: 'Zoo_Keeper_Envelope'
     },
     {
       title: "Nostalgia Portrait",
@@ -45,8 +45,8 @@ export class ProjectsComponent {
       format: "PNG",
       formatColor: "bg-blue-500",
       link: "0004D",
-      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }]
-
+      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }],
+      code: 'Nostalgia_Portrait'
     },
     {
       title: "Nostalgia Portrait Copy",
@@ -54,7 +54,8 @@ export class ProjectsComponent {
       format: "SVG",
       formatColor: "bg-orange-500",
       link: "0005D",
-      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }]
+      stack: [{ title: 'Angular' }, { title: 'TypeScript' }, { title: 'TailwindCSS' }, { title: 'SCSS' }],
+      code: 'Nostalgia_Portrait_Copy1'
     }
   ];
 

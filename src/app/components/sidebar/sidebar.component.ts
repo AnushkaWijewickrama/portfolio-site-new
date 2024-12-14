@@ -82,11 +82,10 @@ export class SidebarComponent implements OnInit {
 
   highlightCurrentSection(): void {
     const sections = [
-      { id: 'section1', index: 1 },
-      { id: 'section2', index: 2 },
-      { id: 'section3', index: 3 },
-      { id: 'section4', index: 4 },
-      { id: 'section5', index: 5 },
+      { id: 'home', index: 1 },
+      { id: 'about', index: 2 },
+      { id: 'projects', index: 3 },
+      { id: 'contact', index: 4 }
     ];
 
     sections.forEach((section) => {

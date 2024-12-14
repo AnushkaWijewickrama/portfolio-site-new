@@ -8,6 +8,7 @@ export interface IPortfolioItems {
   formatColor?: string,
   link?: string,
   stack?: Stack[]
+  code?: string
 }
 
 export class PortfolioItems implements IPortfolioItems {
@@ -17,6 +18,7 @@ export class PortfolioItems implements IPortfolioItems {
     public format?: string,
     public formatColor?: string,
     public link?: string,
-    public stack?: Stack[]
+    public stack?: Stack[],
+    public code?: string
   ) { }
 }

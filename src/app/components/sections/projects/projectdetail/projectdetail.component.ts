@@ -16,7 +16,7 @@ export class ProjectdetailComponent implements OnInit {
   currentImageIndex: number = 0;
   projectsData: ProjectData[] = [
     {
-      code: "0001D",
+      code: "Nostalgia_Portrait_Copy",
       title: "Artify Illustrations",
       client: "X Pro Inc.",
       date: "12-03-2021",
@@ -24,7 +24,7 @@ export class ProjectdetailComponent implements OnInit {
       description: "Labore accusam in modo compungi, iacentem substantiales um se sed esse haec."
     },
     {
-      code: "0002D",
+      code: "Workoholic_City_Design",
       title: "ABC Company",
       client: "X Pro Inc.",
       date: "12-03-2021",
@@ -32,7 +32,7 @@ export class ProjectdetailComponent implements OnInit {
       description: "Labore accusam in modo compungi, iacentem substantiales um se sed esse haec."
     },
     {
-      code: "0003D",
+      code: "Zoo_Keeper_Envelope",
       title: "FIJ Company",
       client: "X Pro Inc.",
       date: "12-03-2021",
@@ -40,7 +40,7 @@ export class ProjectdetailComponent implements OnInit {
       description: "Labore accusam in modo compungi, iacentem substantiales um se sed esse haec."
     },
     {
-      code: "0004D",
+      code: "Nostalgia_Portrait",
       title: "DXY Company",
       client: "X Pro Inc.",
       date: "12-03-2021",
@@ -48,7 +48,7 @@ export class ProjectdetailComponent implements OnInit {
       description: "Labore accusam in modo compungi, iacentem substantiales um se sed esse haec."
     },
     {
-      code: "0005D",
+      code: "Nostalgia_Portrait_Copy1",
       title: "XYZ Company",
       client: "X Pro Inc.",
       date: "12-03-2021",
