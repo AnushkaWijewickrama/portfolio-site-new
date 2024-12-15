@@ -6,8 +6,6 @@ import { AboutComponent } from "../components/sections/about/about.component";
 import { ProjectsComponent } from "../components/sections/projects/projects.component";
 import { ContactsComponent } from "../components/sections/contacts/contacts.component";
 import { NgFor } from '@angular/common';
-import { SectionService } from '../shared/util/sections.service ';
-import { Router } from '@angular/router';
 import AOS from 'aos';
 
 

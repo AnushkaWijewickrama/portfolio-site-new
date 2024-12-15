@@ -6,7 +6,10 @@ export interface IProjectData {
   client?: string,
   date?: string,
   projectLink?: string
-  description?: string
+  description?: string,
+  projectType?: string,
+  images?: any,
+  team?: string,
 }
 
 export class ProjectData implements IProjectData {
@@ -16,6 +19,9 @@ export class ProjectData implements IProjectData {
     public client?: string,
     public date?: string,
     public projectLink?: string,
-    public description?: string
+    public description?: string,
+    public projectType?: string,
+    public images?: any,
+    public team?: string
   ) { }
 }
