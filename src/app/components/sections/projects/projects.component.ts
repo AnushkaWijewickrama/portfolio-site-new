@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { IPortfolioItems } from '../../../shared/model/portfolioItems.model';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { HeaderComponent } from "../../common/header/header.component";
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgFor, RouterLink],
+  imports: [NgFor, RouterLink, HeaderComponent],
   templateUrl: './projects.component.html',
 })
 export class ProjectsComponent {
