@@ -1,61 +1,59 @@
-<div class="dark:bg-gray-900 bg-white px-4 md:px-10 lg:px-16">
-    <section class="mx-auto py-12 dark:bg-gray-900">
-        <!-- Header -->
-        <app-header [title]="'Contact Me'"></app-header>
-        <div class="pr-[20px] pl-[20px] mx-auto px-16 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-transparent">
-            <!-- FAQ Section -->
+<section class="mx-auto py-12 dark:bg-gray-900 p-[40px]">
+    <!-- Header -->
+    <app-header [title]="'Contact Me'"></app-header>
+    <div class="pr-[20px] pl-[20px] mx-auto px-16 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-transparent">
+        <!-- FAQ Section -->
+        <div>
+            <h2 class="text-xl font-bold mb-4 dark:text-white">Frequently Asked Questions</h2>
             <div>
-                <h2 class="text-xl font-bold mb-4 dark:text-white">Frequently Asked Questions</h2>
-                <div>
-                    <!-- FAQ Item 1 -->
-                    <details class="mb-4">
-                        <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">What experience do you
-                            have
-                            in my industry?
-                        </summary>
-                        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
-                    </details>
-                    <!-- FAQ Item 2 -->
-                    <details class="mb-4">
-                        <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">How many clients do you
-                            typically work with at once?</summary>
-                        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
-                    </details>
-                    <!-- FAQ Item 3 -->
-                    <details class="mb-4">
-                        <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">Do you have the
-                            capacity to
-                            take on this project right now?</summary>
-                        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
-                    </details>
-                </div>
-            </div>
-
-            <!-- Contact Form -->
-            <div>
-                <h2 class="text-xl font-bold mb-4 dark:text-white">Feel free to send me a message or any word of
-                    appreciation.</h2>
-                <form action="#" method="POST" class="space-y-4">
-                    <div>
-                        <input type="text" name="name" placeholder="Your Full Name" required
-                            class="w-full px-4 py-5 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600">
-                    </div>
-                    <div>
-                        <input type="email" name="email" placeholder="Your Email Address" required
-                            class="w-full px-4 py-5 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600">
-                    </div>
-                    <div>
-                        <textarea name="message" rows="4" placeholder="Your Message" required
-                            class="w-full px-4 py-4 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600"></textarea>
-                    </div>
-                    <div>
-                        <app-buttons [class]="{dark:'dark'}" [label]="'Submit'"></app-buttons>
-                    </div>
-                </form>
+                <!-- FAQ Item 1 -->
+                <details class="mb-4">
+                    <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">What experience do you
+                        have
+                        in my industry?
+                    </summary>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details class="mb-4">
+                    <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">How many clients do you
+                        typically work with at once?</summary>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details class="mb-4">
+                    <summary class="text-sm font-semibold cursor-pointer dark:text-gray-200">Do you have the
+                        capacity to
+                        take on this project right now?</summary>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                </details>
             </div>
         </div>
-    </section>
-</div>
+
+        <!-- Contact Form -->
+        <div>
+            <h2 class="text-xl font-bold mb-4 dark:text-white">Feel free to send me a message or any word of
+                appreciation.</h2>
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <input type="text" name="name" placeholder="Your Full Name" required
+                        class="w-full px-4 py-5 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600">
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Your Email Address" required
+                        class="w-full px-4 py-5 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600">
+                </div>
+                <div>
+                    <textarea name="message" rows="4" placeholder="Your Message" required
+                        class="w-full px-4 py-4 border border-gray-300 dark:border-gray-600 rounded-md text-sm dark:bg-gray-800 dark:text-white focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:focus:ring-indigo-600"></textarea>
+                </div>
+                <div>
+                    <app-buttons [class]="{dark:'dark'}" [label]="'Submit'"></app-buttons>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
