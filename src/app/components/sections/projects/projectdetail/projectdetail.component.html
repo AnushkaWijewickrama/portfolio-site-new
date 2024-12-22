@@ -1,32 +1,52 @@
 <app-sidebar></app-sidebar>
-<div class="content-container lg:pl-[210px]">
-    <div class="container bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-300">
-        <div class="flex flex-wrap">
-            <div class="relative mx-auto w-full h-screen mt-4">
-                <!-- Image Slider -->
-                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-                    <div *ngFor="let item of selectedProjectData.images;" ngxSlickItem class="slide">
-                        <div class="owl-carousel header-carousel position-relative">
-                            <div class="owl-carousel-item position-relative">
-                                <img class="w-full h-auto max-w-[55%] max-h-[55%] object-contain mx-auto" [src]="item"
-                                    alt="Project Image">
-                            </div>
+<div class="content-container lg:pl-[240px]">
+    <div class="mx-auto px-4 py-8">
+        <!-- Image Section -->
+        <div class="rounded-lg overflow-hidden mb-8">
+            <img src="/projects/projectdetails/4.jpg" alt="Dream Villa" class="w-full h-auto object-cover">
+        </div>
+        <!-- Text Section -->
+        <div>
+            <div class="lg:w-2/4 md:w-full">
+                <h1 class="text-4xl font-bold dark:text-white">A dream villa</h1>
+                <p class="mt-4 text-gray-700 leading-relaxed dark:text-white">
+                    The design of this apartment facing Ipanema beach, in Rio de Janeiro, was designed for a couple with
+                    two young children, who wanted a space to accompany their daughters' growth and also environments
+                    with privacy for home office work.
+                </p>
+
+            </div>
+
+
+            <div
+                class="mt-8 p-6 dark:bg-gray-900 bg-white dark:text-white rounded-lg lg:absolute lg:top-[150px] lg:right-[120px] lg:w-[250px] md:relative md:w-full">
+                <h2 class="text-4xl font-bold mb-4">Elegant Urban Oasis</h2>
+                <ul class="space-y-2">
+                    <li class="text-2x1"><span class="font-bold text-2xl">Clients:</span> Sogeprom</li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Area:</span> 14,891 m<sup>2</sup></li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Project year:</span> 2022</li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Project type:</span> Tertiary, Interior design
+                    </li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Location:</span> Rio de Janeiro</li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Team:</span> Russell Otten, Gabriel Ranieri,
+                        Raissa Furlan,
+                        Maria
+                        Pereira</li>
+                </ul>
+            </div>
+        </div>
+        <div class="relative mx-auto w-full h-screen mt-4">
+            <!-- Image Slider -->
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                <div *ngFor="let item of selectedProjectData.images;" ngxSlickItem class="slide">
+                    <div class="owl-carousel header-carousel position-relative">
+                        <div class="owl-carousel-item position-relative">
+                            <img class="w-full h-auto max-w-[55%] max-h-[55%] object-contain mx-auto" [src]="item"
+                                alt="Project Image">
                         </div>
                     </div>
-                </ngx-slick-carousel>
-
-                <!-- Info Section -->
-                <div class="pl-4 pr-4">
-                    <h4 class="text-xl sm:text-3xl font-semibold">{{ selectedProjectData?.title }}</h4>
-                    <h4 class="font-semibold">{{ selectedProjectData?.description }}</h4>
-                    <ul class="space-y-1 sm:space-y-2">
-                        <li><span class="font-bold">Clients:</span> {{ selectedProjectData?.client }}</li>
-                        <li><span class="font-bold">Project year:</span> {{ selectedProjectData?.date }}</li>
-                        <li><span class="font-bold">Project type:</span> {{ selectedProjectData?.projectType }}</li>
-                        <li><span class="font-bold">Team:</span> {{ selectedProjectData?.team }}</li>
-                    </ul>
                 </div>
-            </div>
+            </ngx-slick-carousel>
         </div>
     </div>
 </div>
