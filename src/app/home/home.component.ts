@@ -7,6 +7,7 @@ import { ProjectsComponent } from "../components/sections/projects/projects.comp
 import { ContactsComponent } from "../components/sections/contacts/contacts.component";
 import { NgFor } from '@angular/common';
 import AOS from 'aos';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ import AOS from 'aos';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     AOS.init({
@@ -25,6 +26,18 @@ export class HomeComponent implements OnInit {
       easing: 'ease-in-out', // Easing type (optional)
       once: false, // Animation only once (optional)
       mirror: false // No repeat on scroll up (optional)
+    });
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        setTimeout(() => {
+          const element = document.getElementById(fragment);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            console.warn('Element not found for fragment:', fragment);
+          }
+        }, 200);
+      }
     });
   }
 

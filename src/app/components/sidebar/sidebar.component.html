@@ -9,18 +9,19 @@
         <ul class="space-y-6 text-lg flex-grow">
             <li>
                 <a href="#home"
-                    class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">Home</a>
+                    class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2"
+                    (click)="selectedId('home')">Home</a>
             </li>
             <li>
-                <a href="#about"
+                <a href="#about" (click)="selectedId('about')"
                     class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">About</a>
             </li>
             <li>
-                <a href="#projects"
+                <a href="#projects" (click)="selectedId('projects')"
                     class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">Projects</a>
             </li>
             <li>
-                <a href="#contact"
+                <a href="#contact" (click)="selectedId('contact')"
                     class="block scrollLink text-gray-800 dark:text-gray-300 hover:text-blue-500 border-b border-gray-300 pb-2">Contact
                     Me</a>
             </li>

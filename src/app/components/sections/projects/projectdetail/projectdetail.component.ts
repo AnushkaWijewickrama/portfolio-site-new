@@ -14,6 +14,7 @@ import { NgFor, NgIf } from '@angular/common';
 export class ProjectdetailComponent implements OnInit {
   // List of images for the slider
   currentImageIndex: number = 0;
+  selectedId: string = ''
   projectsData: ProjectData[] = [
     {
       code: "Nostalgia_Portrait_Copy",
