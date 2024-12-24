@@ -3,35 +3,32 @@
     <div class="mx-auto px-4 py-8">
         <!-- Image Section -->
         <div class="rounded-lg overflow-hidden mb-8">
-            <img src="/projects/projectdetails/4.jpg" alt="Dream Villa" class="w-full h-auto object-cover">
+            <img src="{{selectedProjectData?.images[0]}}" alt="Dream Villa" class="w-full h-auto object-cover">
         </div>
         <!-- Text Section -->
         <div>
             <div class="lg:w-2/4 md:w-full">
-                <h1 class="text-4xl font-bold dark:text-white">A dream villa</h1>
+                <h1 class="text-4xl font-bold dark:text-white">{{selectedProjectData?.title}}</h1>
                 <p class="mt-4 text-gray-700 leading-relaxed dark:text-white">
-                    The design of this apartment facing Ipanema beach, in Rio de Janeiro, was designed for a couple with
-                    two young children, who wanted a space to accompany their daughters' growth and also environments
-                    with privacy for home office work.
+                    {{selectedProjectData?.description}}
                 </p>
 
             </div>
 
 
             <div
-                class="mt-8 p-6 dark:bg-gray-900 bg-white dark:text-white rounded-lg lg:absolute lg:bottom-[0] lg:right-[120px] lg:w-[250px] md:relative md:w-full">
-                <h2 class="text-4xl font-bold mb-4">Elegant Urban Oasis</h2>
+                class="mt-8 p-6 dark:bg-gray-900 bg-white dark:text-white rounded-lg lg:absolute lg:bottom-[0] h-[500px] lg:right-[120px] lg:w-[250px] md:relative md:w-full">
+                <h2 class="text-4xl font-bold mb-4">{{selectedProjectData?.title}}</h2>
                 <ul class="space-y-2">
-                    <li class="text-2x1"><span class="font-bold text-2xl">Clients:</span> Sogeprom</li>
-                    <li class="text-2x1"><span class="font-bold text-2xl">Area:</span> 14,891 m<sup>2</sup></li>
-                    <li class="text-2x1"><span class="font-bold text-2xl">Project year:</span> 2022</li>
-                    <li class="text-2x1"><span class="font-bold text-2xl">Project type:</span> Tertiary, Interior design
+                    <li class="text-2x1"><span class="font-bold text-2xl">Clients:</span>
+                        {{selectedProjectData?.client}}</li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Project year:</span>
+                        {{selectedProjectData?.date}}</li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Project type:</span>
+                        {{selectedProjectData?.projectType}}
                     </li>
-                    <li class="text-2x1"><span class="font-bold text-2xl">Location:</span> Rio de Janeiro</li>
-                    <li class="text-2x1"><span class="font-bold text-2xl">Team:</span> Russell Otten, Gabriel Ranieri,
-                        Raissa Furlan,
-                        Maria
-                        Pereira</li>
+                    <li class="text-2x1"><span class="font-bold text-2xl">Team:</span> {{selectedProjectData?.team}}
+                    </li>
                 </ul>
             </div>
         </div>
