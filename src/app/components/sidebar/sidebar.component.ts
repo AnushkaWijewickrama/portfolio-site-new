@@ -1,8 +1,7 @@
 import { Component, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 import { isMobileResolution } from '../../shared/util/common-util';
 import { NgIf } from '@angular/common';
-import { SectionService } from '../../shared/util/sections.service ';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -123,8 +122,6 @@ export class SidebarComponent implements OnInit {
     return isMobileResolution();
   }
   selectedId(link: string): void {
-    console.log(link)
     this.router.navigate(['/'], { fragment: link });
-    console.log(this.router.navigate(['/'], { fragment: link }))
   }
 }

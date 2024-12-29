@@ -2,21 +2,21 @@
 <div class="content-container lg:pl-[240px]">
     <div class="mx-auto px-4 py-8">
         <!-- Image Section -->
-        <div class="rounded-lg overflow-hidden mb-8">
+        <div class="rounded-lg overflow-hidden mb-8" data-aos="fade-right">
             <img src="{{selectedProjectData?.images[0]}}" alt="Dream Villa" class="w-full h-auto object-cover">
         </div>
         <!-- Text Section -->
         <div>
             <div class="lg:w-2/4 md:w-full">
-                <h1 class="text-4xl font-bold dark:text-white">{{selectedProjectData?.title}}</h1>
-                <p class="mt-4 text-gray-700 leading-relaxed dark:text-white">
+                <!-- <h1 class=" text-4xl font-bold dark:text-white">{{selectedProjectData?.title}}</h1> -->
+                <p data-aos="fade-right" class="mt-4 text-gray-700 leading-relaxed dark:text-white">
                     {{selectedProjectData?.description}}
                 </p>
 
             </div>
 
 
-            <div
+            <div data-aos="fade-right"
                 class="mt-8 p-6 dark:bg-gray-900 bg-white dark:text-white rounded-lg lg:absolute lg:bottom-[0] lg:h-[500px] lg:right-[120px] lg:w-[250px] md:relative md:w-full">
                 <h2 class="text-4xl font-bold mb-4">{{selectedProjectData?.title}}</h2>
                 <ul class="space-y-2">
@@ -32,18 +32,26 @@
                 </ul>
             </div>
         </div>
-        <div class="relative mx-auto w-full h-screen mt-4">
-            <!-- Image Slider -->
-            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-                <div *ngFor="let item of selectedProjectData.images;" ngxSlickItem class="slide">
-                    <div class="owl-carousel header-carousel position-relative">
-                        <div class="owl-carousel-item position-relative">
-                            <img class="w-full h-auto max-w-[55%] max-h-[55%] object-contain mx-auto" [src]="item"
-                                alt="Project Image">
-                        </div>
-                    </div>
-                </div>
-            </ngx-slick-carousel>
+        <!-- Image Slider -->
+        <div class="relative w-full max-w-lg mx-auto overflow-hidden" data-aos="fade-right">
+            <button (click)="prevImage()"
+                class="absolute top-1/2 -translate-y-1/2 left-0 bg-black bg-opacity-50 text-white border-none p-2 cursor-pointer">
+                &#10094;
+            </button>
+            <div class="rounded-lg">
+                <img [src]="selectedProjectData?.images[currentIndex]" alt="Slider Image" class="w-full rounded-lg" />
+            </div>
+            <button (click)="nextImage()"
+                class="absolute top-1/2 -translate-y-1/2 right-0 bg-black bg-opacity-50 text-white border-none p-2 cursor-pointer">
+                &#10095;
+            </button>
         </div>
+
+        <div class="flex justify-center mt-2">
+            <span *ngFor="let image of selectedProjectData?.images; let i = index" [class.bg-black]="i === currentIndex"
+                [class.bg-gray-500]="i !== currentIndex" (click)="currentIndex = i"
+                class="h-2.5 w-2.5 mx-1 rounded-full cursor-pointer"></span>
+        </div>
+
     </div>
 </div>

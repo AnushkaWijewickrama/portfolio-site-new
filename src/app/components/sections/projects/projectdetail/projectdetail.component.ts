@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SidebarComponent } from "../../../sidebar/sidebar.component";
 import { ProjectData } from '../../../../shared/model/projectData.model';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-pagedetail',
   standalone: true,
-  imports: [SidebarComponent, NgIf, NgFor, SlickCarouselModule],
+  imports: [SidebarComponent, NgFor],
   templateUrl: './projectdetail.component.html'
 })
 export class ProjectdetailComponent implements OnInit {
-  // List of images for the slider
-  currentImageIndex: number = 0;
+  currentIndex = 0;
   selectedId: string = ''
   projectsData: ProjectData[] = [
     {
@@ -115,6 +115,12 @@ export class ProjectdetailComponent implements OnInit {
   constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+    AOS.init({
+      duration: 1000, // Animation duration (optional)
+      easing: 'ease-in-out', // Easing type (optional)
+      once: false, // Animation only once (optional)
+      mirror: false // No repeat on scroll up (optional)
+    });
     this.router.params.subscribe((res: any) => {
       this.projectsData.forEach((data => {
         if (data?.code === res?.project) {
@@ -123,5 +129,14 @@ export class ProjectdetailComponent implements OnInit {
         }
       }))
     })
+  }
+  nextImage() {
+    this.currentIndex = (this.currentIndex + 1) % this.selectedProjectData.images.length;
+    console.log('asdd')
+  }
+
+  prevImage() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.selectedProjectData.images.length) % this.selectedProjectData.images.length;
   }
 }
